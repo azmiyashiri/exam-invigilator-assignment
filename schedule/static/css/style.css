@@ -1,0 +1,63 @@
+
+.nav-item{
+	
+	padding: 0 28px;
+
+}
+.nav-item:hover{
+	display: block;
+	color:#68b0ab;
+	}
+.nav-link{
+	font-size: 1.3rem;
+	color: #ffeeec!important;
+	font-family: "Montserrat-Light";
+}
+body{
+
+	font-family: 'Roboto', sans-serif;
+	background:url('/static/images/examiner.jpg') ;
+	background-repeat: no-repeat;  
+  background-size: cover;
+	background-color: #efece9;
+	 
+}
+
+.class1 {
+    color: #2c3e50; /* Darker shade of blue for better readability */
+    line-height: 1.5; /* Slightly reduced line height for better text compactness */
+    font-family: 'Merriweather', serif; /* Keeping the original font for consistency */
+    font-weight: bold; /* Retaining bold font weight */
+    margin: 100px auto 40px auto;
+    max-width: 80%; /* Limit text width to prevent overly long lines */
+    text-align: center; /* Center the text */
+    overflow: hidden;
+    white-space: nowrap;
+	margin-top: 20px;
+}
+
+/* Keyframe animation */
+@keyframes mine {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 40ch;
+    }
+}
+
+.nav-link:hover{
+	color: #efeeec;
+ text-decoration: underline;
+	
+}
+.container-fluid{
+	background-color: #00416d;
+	height: 1.2%;
+	padding:0 0;
+}
+.img{
+	width:4%;
+	height: 4%;
+
+}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Faculty Login Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Mystyle3.css' %}">
+    <style>
+        body {
+            background-color: black; /* Sets the background color to black */
+            color: white; /* Optional: Sets the text color to white for better visibility on black background */
+        }
+        .cream-input {
+            background-color: #FFFDD0; /* Light cream color */
+            border: 1px solid #ccc; /* Light grey border */
+            padding: 5px; /* Padding inside the input */
+        }
+        .loginbox {
+            background-color: rgba(255, 255, 255, 0.1); /* Optional: Slightly transparent white background for the login box */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+	{% include 'schedule/messages.html' %}
+	<center><h3 style="color: rgb(249, 236, 236);">EXAM-INVIGILATOR ASSIGNMENT SYSTEM</h3></center>
+	<div class="loginbox">
+		<img src="/static/images/faculty1.png" id="faculty1">
+		<h1>LOGIN HERE</h1>
+		<form action="{% url 'fac' %}" method="POST">
+			{% csrf_token %}
+			<div>
+				<label>ID</label>
+				<input type="number" name="id" placeholder="Enter ID" class="cream-input">
+			</div>
+			<div class="formbox">
+				<label>EMAIL</label>
+				<input type="email" name="email" placeholder="Enter Email as ...@gvpcew.ac.in">
+			</div>
+			<div class="formbox">
+				<label>DEPARTMENT</label>
+				<input type="text" name="uname" placeholder="Enter Department">
+			</div>
+			<input type="submit" name="submit" placeholder="LOGIN">
+		</form>
+	</div>
+</body>
+</html>
